@@ -1,6 +1,166 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-    <h1>
-        Welcome to {{ title }}!
-    </h1>
+<!--Main navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Trending</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Nearby</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">My Reviews</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Profile</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Followings</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <!--<button class="btn btn-outline-success my-2 my-sm-0 hidden" type="submit">Search</button>-->
+        </form>
+        <button class="btn btn-primary" type="submit">Button</button>
+        <button class="btn btn-primary" type="submit">Button</button>
+        <button class="btn btn-primary" type="submit">Button</button>
+
+    </div>
+</nav>
+
+<!--Main content area-->
+{{x}}
+{{latlon}}
+{{img_url}}
+<div class="container-fluid">
+    <div class="row">
+        <!--Left sidebar-->
+        <div class="col-12 col-md-3">
+            <div class="row leftSidebar">
+                <!--login area-->
+                <div class="col-12 col-md-12 login-area">
+                    login
+                </div>
+                <!--Category area-->
+                <div class="col-12 col-md-12">
+                    <a href="#">
+                        <div class="row">
+                            <div class="col-3 col-md-3">
+                                <img class="category-image" src="http://via.placeholder.com/45x45" alt="">
+                            </div>
+                            <div class="col-9 col-md-9">
+                                Food & Drink
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#">
+                        <div class="row">
+                            <div class="col-3 col-md-3">
+                                <img class="category-image" src="http://via.placeholder.com/45x45" alt="">
+
+                            </div>
+                            <div class="col-9 col-md-9">
+                                Fitness Center
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#">
+                        <div class="row">
+                            <div class="col-3 col-md-3">
+                                <img class="category-image" src="http://via.placeholder.com/45x45" alt="">
+
+                            </div>
+                            <div class="col-9 col-md-9">
+                                Beauty Center
+                            </div>
+                        </div>
+                    </a>
+
+
+                    <a href="#">
+                        <div class="row">
+                            <div class="col-3 col-md-3">
+                                <img class="category-image" src="http://via.placeholder.com/45x45" alt="">
+
+                            </div>
+                            <div class="col-9 col-md-9">
+                                Health Care
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#">
+                        <div class="row">
+                            <div class="col-3 col-md-3">
+                                <img class="category-image" src="http://via.placeholder.com/45x45" alt="">
+
+                            </div>
+                            <div class="col-9 col-md-9">
+                                Entertainment
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!--main view area-->
+        <div class="col-12 col-md-6 main-view-area">
+            <!--title-->
+            <div class="row">
+                <div class="col-3 col-md-2">image</div>
+                <div class="col-9 col-md-8">Title</div>
+                <div class="col-12 col-md-2">status</div>
+            </div>
+            <!--main image-->
+            <div class="row">
+                <img class="main-view-area_image" src="http://via.placeholder.com/490x227" alt="">
+            </div>
+
+            <!--description-->
+            <div class="row">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto asperiores, blanditiis consectetur
+                cum dicta doloremque exercitationem fuga illum necessitatibus nemo odit omnis pariatur porro qui
+                quisquam rem sed ullam veritatis!
+            </div>
+
+            <!--keywords-->
+            <div class="row">
+                #lorem #ipsum #dolor
+            </div>
+
+            <!--metadata-->
+            <div class="row">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto blanditiis dicta ea enim.
+            </div>
+
+            <!--facilities-->
+            <div class="row">
+                <div class="col-12 col-md-12">
+                    <img src="http://via.placeholder.com/58x58" alt="">
+                    <img src="http://via.placeholder.com/58x58" alt="">
+                    <img src="http://via.placeholder.com/58x58" alt="">
+                    <img src="http://via.placeholder.com/58x58" alt="">
+                    <img src="http://via.placeholder.com/58x58" alt="">
+                    <img src="http://via.placeholder.com/58x58" alt="">
+                    <img src="http://via.placeholder.com/58x58" alt="">
+                </div>
+            </div>
+        </div>
+
+        <!--Right sidebar-->
+        <div class="col-12 col-md-3">
+            right
+        </div>
+    </div>
 </div>

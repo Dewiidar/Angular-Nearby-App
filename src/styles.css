@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+.hidden {
+    visibility: hidden;
+    display: none;
+}
+
+/*adjusting gutter space*/
+.row {
+    margin: 1.5em -7.5px;
+}
+[class*="col-"] {
+    padding: 0 7.5px;
+}
+
+[class*="col-"] {
+    text-align: center;
+}

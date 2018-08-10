@@ -1,0 +1,19 @@
+/*left sidebar*/
+
+/*login area*/
+.login-area {
+    min-height: 144px;
+    background-color: grey;
+}
+
+.category-image {
+    width: 45.68px;
+    height: 45.68px;
+}
+
+
+/*main view area*/
+
+.main-view-area .main-view-area_image {
+    width: 100%;
+}
