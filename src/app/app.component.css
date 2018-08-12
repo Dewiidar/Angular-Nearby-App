@@ -1,19 +1,142 @@
+* {
+    transition: .2s ease-in-out;
+}
+a:hover {
+    opacity: .6;
+}
+
+.leftSidebar, .main-view-area, .rightSidebar, .navbar {
+    background-color: white;
+}
+.leftSidebar, .main-view-area, .rightSidebar {
+    margin-top: 25px;
+    margin: 0px;
+}
+
+@media (max-width: 992px) {
+    .no-padding-s {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+/*main nav bar*/
+/*left navigation icons*/
+
+.main-nav-btns img {
+    width: 24px;
+}
+
+li.nav-item.active {
+    border-bottom: 5px solid #DB1F30;
+}
+
+li.nav-item.active a {
+    color: #DB1F30;
+}
+
+li.nav-item a {
+    font-size: .8em;
+    font-weight: 700;
+}
+
+li.nav-item {
+    margin: auto;
+    box-sizing: content-box;
+}
+
+.nav-search-bar {
+    border-radius: 40px;
+    font-size: .8em;
+    position: relative;
+    min-width: 200px;
+}
+
+.nav-search-bar::placeholder {
+    padding-left: 20px;
+}
+.nav-search-bar:focus .search-icon {
+    width: 0px;
+}
+
+.search-form:hover .search-icon {
+    opacity: 0;
+}
+.search-form:hover ::placeholder {
+    opacity: 0;
+    transition: .3s ease-in-out;
+}
+
+img.search-icon {
+    position: absolute;
+    width: 30px;
+    margin-left: 5px;
+}
+
+.right-nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+}
+.right-nav-link {
+    all: unset;
+}
+.right-nav-link:hover {
+    cursor: pointer;
+}
+.right-nav-link img {
+    width: 23px;
+    background: snow;
+    margin: 0 10px;
+}
+
 /*left sidebar*/
 
 /*login area*/
+
 .login-area {
     min-height: 144px;
-    background-color: grey;
+    background-color: #616161;
+}
+
+.category-area a {
+    color: black;
+    text-decoration: none;
+}
+.category-area a:hover {
+    color: red;
+    text-decoration: none;
+}
+.category-area .col-9 {
+    margin: auto;
 }
 
 .category-image {
     width: 45.68px;
     height: 45.68px;
+    border-radius: 50%;
+}
+.login-area-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+}
+.login-area-image img {
+    width: 56px;
+}
+.login-register-btn {
+    color: white;
 }
 
-
-/*main view area*/
-
-.main-view-area .main-view-area_image {
-    width: 100%;
+.boxes-container {
+    display: flex;
+    padding: 0px;
+}
+.box {
+    flex: 1;
+    border: 1px solid #DB1F30;
+    height: 64px;
 }

@@ -1,58 +1,106 @@
 <!--Main navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
+
+        <!--main navigation buttons-->
+        <ul class="navbar-nav mr-auto main-nav-btns">
             <li class="nav-item">
-                <a class="nav-link" href="#">Trending</a>
+                <a class="nav-link" href="#">
+                    <img src="../assets/images/trending.png" alt="">
+                    Trending
+                </a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="#">Nearby</a>
+                <a class="nav-link" href="#">
+                    <img src="../assets/images/ic_nearby.png" alt="">
+                    Nearby
+                </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">My Reviews</a>
+                <a class="nav-link" href="#">
+                    <img src="../assets/images/ic_my%20reviews.png" alt="">
+                    My Reviews
+                </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Profile</a>
+                <a class="nav-link" href="#">
+                    <img src="../assets/images/ic_profile.png" alt="">
+                    Profile
+                </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Followings</a>
+                <a class="nav-link" href="#">
+                    <img src="../assets/images/ic_followings.png" alt="">
+                    Followings
+                </a>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <!--<button class="btn btn-outline-success my-2 my-sm-0 hidden" type="submit">Search</button>-->
+        <form class="form-inline my-2 my-lg-0 search-form">
+            <input class="form-control mr-sm-2 nav-search-bar" type="search" placeholder="Search for nearby places"
+                   aria-label="Search">
+            <img class="search-icon"
+                 src="https://cdn1.iconfinder.com/data/icons/hawcons/32/698956-icon-111-search-128.png" alt="">
         </form>
-        <button class="btn btn-primary" type="submit">Button</button>
-        <button class="btn btn-primary" type="submit">Button</button>
-        <button class="btn btn-primary" type="submit">Button</button>
+        <ul class="right-nav-list">
+            <li>
+                <a class="right-nav-link" type="submit">
+                    <img src="../assets/images/ic_filter.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a [routerLink]="(routerLinkVariable ? listLink : mapLink)" class="right-nav-link" type="submit"
+                   (click)='toggleMap()'>
+                    <img [src]="(showMap ? listIcon : mapIcon )" alt="">
+                </a>
+            </li>
+            <li>
+                <a class="right-nav-link" type="submit">
+                    <img src="../assets/images/ic_settings.png" alt="">
+                </a>
+            </li>
+        </ul>
 
     </div>
 </nav>
 
 <!--Main content area-->
-{{x}}
-{{latlon}}
-{{img_url}}
+
+<!--geolocation-->
+<!--{{errorMessage}}-->
+<!--{{lat}}-->
+<!--{{lon}}-->
+
+<!--{{token}}-->
+<!--{{data}}-->
+
+<!--{{img_url}}-->
 <div class="container-fluid">
     <div class="row">
         <!--Left sidebar-->
-        <div class="col-12 col-md-3">
+        <div class="col-12 col-md-3 pl-0 no-padding-s">
             <div class="row leftSidebar">
                 <!--login area-->
                 <div class="col-12 col-md-12 login-area">
-                    login
+                    <div class="login-area-container">
+                        <div class="login-area-image">
+                            <img src="../assets/images/profile%20pic.png" alt="">
+                        </div>
+                        <div class="login-register-btn">
+                            Register/Sign in
+                        </div>
+                    </div>
                 </div>
                 <!--Category area-->
-                <div class="col-12 col-md-12">
+                <div class="col-12 col-md-12 category-area">
                     <a href="#">
                         <div class="row">
                             <div class="col-3 col-md-3">
-                                <img class="category-image" src="http://via.placeholder.com/45x45" alt="">
+                                <img class="category-image" src="../assets/images/AST food_and_drink.png" alt="">
                             </div>
                             <div class="col-9 col-md-9">
                                 Food & Drink
@@ -63,8 +111,7 @@
                     <a href="#">
                         <div class="row">
                             <div class="col-3 col-md-3">
-                                <img class="category-image" src="http://via.placeholder.com/45x45" alt="">
-
+                                <img class="category-image" src="../assets/images/fitness@2x.png" alt="">
                             </div>
                             <div class="col-9 col-md-9">
                                 Fitness Center
@@ -75,7 +122,7 @@
                     <a href="#">
                         <div class="row">
                             <div class="col-3 col-md-3">
-                                <img class="category-image" src="http://via.placeholder.com/45x45" alt="">
+                                <img class="category-image" src="../assets/images/beauty@2x.png" alt="">
 
                             </div>
                             <div class="col-9 col-md-9">
@@ -88,7 +135,7 @@
                     <a href="#">
                         <div class="row">
                             <div class="col-3 col-md-3">
-                                <img class="category-image" src="http://via.placeholder.com/45x45" alt="">
+                                <img class="category-image" src="../assets/images/AST health_care@2x.png" alt="">
 
                             </div>
                             <div class="col-9 col-md-9">
@@ -100,7 +147,7 @@
                     <a href="#">
                         <div class="row">
                             <div class="col-3 col-md-3">
-                                <img class="category-image" src="http://via.placeholder.com/45x45" alt="">
+                                <img class="category-image" src="../assets/images/ASTentertainment@2x.png" alt="">
 
                             </div>
                             <div class="col-9 col-md-9">
@@ -111,56 +158,33 @@
 
                 </div>
 
+                <div class="col-12 col-md-12 boxes-container">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                </div>
             </div>
         </div>
 
         <!--main view area-->
-        <div class="col-12 col-md-6 main-view-area">
-            <!--title-->
-            <div class="row">
-                <div class="col-3 col-md-2">image</div>
-                <div class="col-9 col-md-8">Title</div>
-                <div class="col-12 col-md-2">status</div>
-            </div>
-            <!--main image-->
-            <div class="row">
-                <img class="main-view-area_image" src="http://via.placeholder.com/490x227" alt="">
-            </div>
-
-            <!--description-->
-            <div class="row">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto asperiores, blanditiis consectetur
-                cum dicta doloremque exercitationem fuga illum necessitatibus nemo odit omnis pariatur porro qui
-                quisquam rem sed ullam veritatis!
-            </div>
-
-            <!--keywords-->
-            <div class="row">
-                #lorem #ipsum #dolor
-            </div>
-
-            <!--metadata-->
-            <div class="row">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto blanditiis dicta ea enim.
-            </div>
-
-            <!--facilities-->
-            <div class="row">
-                <div class="col-12 col-md-12">
-                    <img src="http://via.placeholder.com/58x58" alt="">
-                    <img src="http://via.placeholder.com/58x58" alt="">
-                    <img src="http://via.placeholder.com/58x58" alt="">
-                    <img src="http://via.placeholder.com/58x58" alt="">
-                    <img src="http://via.placeholder.com/58x58" alt="">
-                    <img src="http://via.placeholder.com/58x58" alt="">
-                    <img src="http://via.placeholder.com/58x58" alt="">
+        <div class="col-12 col-md-6 no-padding-s">
+            <div class="row main-view-area">
+                <div class="container">
+                    <div class="col-12 col-md-12">
+                    <router-outlet></router-outlet>
+                    </div>
                 </div>
             </div>
         </div>
 
         <!--Right sidebar-->
-        <div class="col-12 col-md-3">
-            right
+        <div class="col-12 col-md-3 pr-0 no-padding-s">
+            <div class="row rightSidebar">
+                <div class="col-12 col-md-12">
+                    right sidebar
+                </div>
+            </div>
         </div>
     </div>
 </div>

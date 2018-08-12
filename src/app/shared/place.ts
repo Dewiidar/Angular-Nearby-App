@@ -1,0 +1,32 @@
+export interface IPlace {
+    about;
+    address;
+    branchesIds;
+    categories;
+    createdAt;
+    facilities;
+    hashtags;
+    hotLineNumber;
+    instagramUrl;
+    isHighlighted;
+    location;
+    mobileNumber;
+    name;
+    openingTimes;
+    phoneNumbers;
+    placeGalleryPicturesUrls;
+    placeManagers;
+    placeProfileCoverPictureUrl;
+    placeProfilePictureUrl;
+    pmFollowers;
+    pmFollowersCount;
+    status;
+    subcategories;
+    telephoneNumber;
+    totalFollowersCount;
+    twitterUrl;
+    updatedAt;
+    userFollowers;
+    userFollowersCount;
+    websiteUrl;
+}

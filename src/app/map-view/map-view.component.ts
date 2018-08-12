@@ -1,15 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-map-view',
-  templateUrl: './map-view.component.html',
-  styleUrls: ['./map-view.component.css']
+    templateUrl: './map-view.component.html',
+    styleUrls: ['./map-view.component.css']
 })
 export class MapViewComponent implements OnInit {
 
-  constructor() { }
+    constructor() {
+    }
 
-  ngOnInit() {
-  }
+    google: any;
+
+    ngOnInit() {
+    //     const mapProp = {
+    //         center: new google.maps.LatLng(51.508742, -0.120850),
+    //         zoom: 5,
+    //         mapTypeId: google.maps.MapTypeId.ROADMAP
+    //     };
+    //     let map = new google.maps.Map(document.getElementById('googleMap'), mapProp);
+    }
 
 }

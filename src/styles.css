@@ -5,12 +5,10 @@
 
 /*adjusting gutter space*/
 .row {
-    margin: 1.5em -7.5px;
-}
-[class*="col-"] {
-    padding: 0 7.5px;
+    margin: 1em 0px;
 }
 
-[class*="col-"] {
-    text-align: center;
+body {
+    background-color: lightgray;
+    font-size: 1em;
 }
