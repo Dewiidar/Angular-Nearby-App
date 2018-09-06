@@ -1,0 +1,24 @@
+agm-map {
+    height: 300px;
+}
+
+
+.no-margin-top {
+    margin: 0px 0 1em 0!important;
+}
+
+.border-bottom-styles {
+    /*border: 2px solid grey;*/
+    background-color: white;
+    -webkit-box-shadow: 11px 10px 59px -20px rgba(0,0,0,0.75);
+    -moz-box-shadow: 11px 10px 59px -20px rgba(0,0,0,0.75);
+    box-shadow: 11px 10px 59px -20px rgba(0,0,0,0.75);
+
+}
+
+
+@media (max-width: 992px) {
+    .border-bottom-styles {
+        font-size: .9em;
+    }
+}

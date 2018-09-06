@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {LocationService} from '../shared/location.service';
 
 @Component({
     templateUrl: './map-view.component.html',
@@ -6,18 +7,17 @@ import {Component, OnInit} from '@angular/core';
 })
 export class MapViewComponent implements OnInit {
 
-    constructor() {
+    lat: number;
+    lng: number;
+
+
+    constructor(private locationService: LocationService) {
     }
 
-    google: any;
-
     ngOnInit() {
-    //     const mapProp = {
-    //         center: new google.maps.LatLng(51.508742, -0.120850),
-    //         zoom: 5,
-    //         mapTypeId: google.maps.MapTypeId.ROADMAP
-    //     };
-    //     let map = new google.maps.Map(document.getElementById('googleMap'), mapProp);
+        this.locationService.getLocation();
+        this.lat = this.locationService.lat;
+        this.lng = this.locationService.lon;
     }
 
 }

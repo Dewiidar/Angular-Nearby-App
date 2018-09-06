@@ -1,4 +1,11 @@
-<!--<div id="googleMap" style="width:100%;height:380px;"></div>-->
-
-<!--dummy image-->
-<img style="width: 100%" src="https://www.citymetric.com/sites/default/files/styles/nodeimage/public/article_2016/08/gmaps_head.png?itok=MZsYvZFq" alt="">
+<div class="row no-margin-top">
+    <div class="col-12 col-md-12 border-bottom-styles">
+        <div class="row">
+            <div class="col-12">
+            <agm-map [latitude]="lat" [longitude]="lng">
+                <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+            </agm-map>
+            </div>
+        </div>
+    </div>
+</div>

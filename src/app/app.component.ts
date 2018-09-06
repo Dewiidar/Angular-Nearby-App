@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {TokenService} from './shared/token.service';
 import {PlacesService} from './shared/places.service';
+import {LocationService} from './shared/location.service';
+import {IPlace} from './shared/place';
 
 @Component({
     selector: 'app-root',
@@ -19,85 +21,37 @@ export class AppComponent implements OnInit {
     public mapIcon = '../assets/images/ic_map%20view.png';
     public listIcon = '../assets/images/list%20view.png';
 
-    // geolocation variable
-    errorMessage: string;
+    lng: number;
     lat: number;
-    lon: number;
+    public token: string;
 
-    // authorization token
-    token: string;
+    constructor(private locationService: LocationService, private tokenService: TokenService) {
+        this.locationService.getLocation();
+    }
 
-    // main data
-    data: any;
+    initiateLocation() {
+        this.locationService.getLocation();
+    }
 
-    // Getting location method
-    public getLocation = () => {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(this.showPosition, this.showError);
-        } else {
-            this.errorMessage = 'Geolocation is not supported by this browser.';
-        }
-    };
+    initiateToken() {
+        this.tokenService.getToken().subscribe(
+            response => {
+                this.token = response;
+                // console.log(JSON.parse(response));
 
-    public showPosition = (position) => {
-        this.lat = position.coords.latitude;
-        console.log('lat', this.lat);
-        this.lon = position.coords.longitude;
-        console.log('lon', this.lon);
-
-    };
-
-    public showError = (error) => {
-        switch (error.code) {
-            case error.PERMISSION_DENIED:
-                this.errorMessage = 'User denied the request for Geolocation.';
-                break;
-            case error.POSITION_UNAVAILABLE:
-                this.errorMessage = 'Location information is unavailable.';
-                break;
-            case error.TIMEOUT:
-                this.errorMessage = 'The request to get user location timed out.';
-                break;
-            case error.UNKNOWN_ERROR:
-                this.errorMessage = 'An unknown error occurred.';
-                break;
-        }
-    };
-
-    constructor(private tokenService: TokenService, public placeService: PlacesService) {
+                localStorage.setItem('token', JSON.parse(response));
+            },
+            err => {
+                this.tokenService.handleError(err);
+            }
+        );
     }
 
     ngOnInit() {
         // calling getting location
-        this.getLocation();
 
-        // getting web token id via tokenService
-        this.tokenService.getToken().subscribe(
-            response => {
-                this.token = response.response.payload.jwt;
-                localStorage.setItem('currentUser', JSON.stringify({token: this.token, name: name}));
+        this.initiateToken();
 
-            },
-            err => {
-                console.log('Error occured');
-            },
-            (): void => {
-
-                // Getting the data on completion of authorisation
-                // assigning token to the places service
-                this.placeService.token = this.token;
-                console.log(this.placeService.authKey);
-
-                // calling the places service to get data
-                this.placeService.getPlaces()
-                    .subscribe(
-                        responseData => {
-                            this.data = responseData.response.payload;
-                            console.log(this.data);
-                        }
-                    );
-            }
-        );
     }
 
     toggleMap(): void {

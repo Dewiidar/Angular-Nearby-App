@@ -1,103 +1,116 @@
 <!--title-->
-<div class="row">
-    <div class="col-3 col-md-2">
-        <img src="../../assets/images/Repeat%20Grid%201.png" alt="" class="location-image">
-    </div>
-    <div class="col-9 col-md-8 text-middle">
-        <div class="titleContainer">
-            <div class="title">
-                Title
+<div class="row no-margin-top" *ngFor="let place of places">
+    <div class="col-12 col-md-12 border-bottom-styles">
+        <div class="row">
+            <div class="col-3 col-md-2">
+                <img src="{{place.categories[0].iconUrl}}" alt="" class="location-image">
             </div>
-            <div class="subTitle">
-                Sub title
+            <div class="col-9 col-md-8 text-middle">
+                <div class="titleContainer">
+                    <div class="title">
+                        {{place.name.en}}
+                    </div>
+                    <div class="subTitle">
+                        {{place.categories[0].name.en}}
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    <div class="col-12 col-md-2">
-        <div class="status">
-            status
-        </div>
-    </div>
-</div>
-<!--main image-->
-<div class="row">
-    <img class="main-view-area_image" src="http://via.placeholder.com/700x300" alt="">
-</div>
-
-<!--description-->
-<div class="row">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto asperiores, blanditiis consectetur
-    cum dicta doloremque exercitationem fuga illum necessitatibus nemo odit omnis pariatur porro qui
-    quisquam rem sed ullam veritatis!
-</div>
-
-<!--keywords-->
-<div class="row">
-    <div class="keywords">
-        <a href="">
-            #lorem
-        </a>
-        <a href="">
-            ##ipsum
-        </a>
-    </div>
-</div>
-
-<!--metadata-->
-<div class="row">
-    <div class="metadata">
-        <div class="metadata-container">
-            <div class="metadata-image">
-                <img src="../../assets/images/ic_location@2x.png" alt="">
-            </div>
-            <div class="metadata-title">
-                Camp Caesar
+            <div class="col-12 col-md-2">
+                <div class="status">
+                    {{place.status}}
+                </div>
             </div>
         </div>
-        <div class="metadata-container">
-            <div class="metadata-image">
-                <img src="../../assets/images/ic_walk@2x.png" alt="">
-            </div>
-            <div class="metadata-title">
-                Camp Caesar
+        <!--main image-->
+        <div class="row">
+            <div class="col-12 col-md-12">
+                <img class="main-view-area_image" src="{{place.placeProfilePictureUrl}}" alt="">
             </div>
         </div>
-        <div class="metadata-container">
-            <div class="metadata-image">
-                <img class="img-md" src="../../assets/images/ic_followers@2x.png" alt="">
-            </div>
-            <div class="metadata-title">
-                Camp Caesar
+
+        <!--description-->
+        <div class="row">
+            <div class="col-12 col-md-12">
+            {{place.shortDescription.en}}
             </div>
         </div>
-    </div>
-</div>
 
-<!--facilities-->
-<div class="row">
-    <div class="col-12 col-md-12">
-        <div class="facilities">
+        <!--keywords-->
+        <div class="row">
+            <div class="col-12 col-md-12">
 
-            <div class="img-container">
-                <img src="../../assets/images/ic_bathrooms@2x.png" alt="">
+            <div class="keywords">
+                <a href="#{{place.hashtags[0].name}}">
+                    #{{place.hashtags[0].name}}
+                </a>
             </div>
-            <div class="img-container">
-                <img src="../../assets/images/ic_air conditioned@2x.png" alt="">
+
             </div>
-            <div class="img-container">
-                <img src="../../assets/images/ic_outdoors@2x.png" alt="">
+        </div>
+
+        <!--metadata-->
+        <div class="row">
+            <div class="col-12 col-md-12">
+
+            <div class="metadata">
+                <div class="metadata-container">
+                    <div class="metadata-image">
+                        <img src="../../assets/images/ic_location@2x.png" alt="">
+                    </div>
+                    <div class="metadata-title">
+                        {{place.address.firstLine.en}}
+
+                    </div>
+                </div>
+                <div class="metadata-container">
+                    <div class="metadata-image">
+                        <img src="../../assets/images/ic_walk@2x.png" alt="">
+                    </div>
+                    <div class="metadata-title">
+                        120 minutes walk
+                    </div>
+                </div>
+                <div class="metadata-container">
+                    <div class="metadata-image">
+                        <img class="img-md" src="../../assets/images/ic_followers@2x.png" alt="">
+                    </div>
+                    <div class="metadata-title">
+                        {{place.totalFollowersCount}} Followers
+                    </div>
+                </div>
             </div>
-            <div class="img-container">
-                <img src="../../assets/images/ic_online reservation@2x.png" alt="">
+
             </div>
-            <div class="img-container">
-                <img src="../../assets/images/ic_allows%20pet@2x.png" alt="">
-            </div>
-            <div class="img-container">
-                <img src="../../assets/images/ic_ladies only@2x.png" alt="">
-            </div>
-            <div class="img-container">
-                <img src="../../assets/images/ic_smoking@2x.png" alt="">
+        </div>
+
+        <!--facilities-->
+        <div class="row">
+            <div class="col-12 col-md-12">
+                <div class="facilities">
+
+                    <!--<div class="img-container" *ngFor="let facility of place.facilities">-->
+                    <!--<img src="{{facility.iconUrl}}" alt="">-->
+                    <!--</div>-->
+
+                    <div class="img-container">
+                        <img src="../../assets/images/ic_air conditioned@2x.png" alt="">
+                    </div>
+                    <div class="img-container">
+                        <img src="../../assets/images/ic_outdoors@2x.png" alt="">
+                    </div>
+                    <div class="img-container">
+                        <img src="../../assets/images/ic_online reservation@2x.png" alt="">
+                    </div>
+                    <div class="img-container">
+                        <img src="../../assets/images/ic_allows%20pet@2x.png" alt="">
+                    </div>
+                    <div class="img-container">
+                        <img src="../../assets/images/ic_ladies only@2x.png" alt="">
+                    </div>
+                    <div class="img-container">
+                        <img src="../../assets/images/ic_smoking@2x.png" alt="">
+                    </div>
+                </div>
             </div>
         </div>
     </div>

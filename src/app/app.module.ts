@@ -8,6 +8,9 @@ import {TokenService} from './shared/token.service';
 import {HttpClientModule} from '@angular/common/http';
 import {PlacesService} from './shared/places.service';
 import {RouterModule} from '@angular/router';
+import {LocationService} from './shared/location.service';
+import { AgmCoreModule } from '@agm/core';
+
 
 @NgModule({
   declarations: [
@@ -21,9 +24,12 @@ import {RouterModule} from '@angular/router';
       RouterModule.forRoot([
           {path: '', component: ListViewComponent},
           {path: 'mapView', component: MapViewComponent}
-      ])
+      ]),
+      AgmCoreModule.forRoot({
+          apiKey: 'AIzaSyBUA6R8PODZBeHr7CCrwmR_GZcStn_AS5A'
+      })
   ],
-  providers: [TokenService, PlacesService],
+  providers: [TokenService, PlacesService, LocationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

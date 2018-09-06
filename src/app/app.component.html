@@ -1,88 +1,81 @@
 <!--Main navbar -->
 <nav class="navbar navbar-expand-lg navbar-light">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-        <!--main navigation buttons-->
-        <ul class="navbar-nav mr-auto main-nav-btns">
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <img src="../assets/images/trending.png" alt="">
-                    Trending
-                </a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="#">
-                    <img src="../assets/images/ic_nearby.png" alt="">
-                    Nearby
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <img src="../assets/images/ic_my%20reviews.png" alt="">
-                    My Reviews
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <img src="../assets/images/ic_profile.png" alt="">
-                    Profile
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <img src="../assets/images/ic_followings.png" alt="">
-                    Followings
-                </a>
-            </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0 search-form">
-            <input class="form-control mr-sm-2 nav-search-bar" type="search" placeholder="Search for nearby places"
-                   aria-label="Search">
-            <img class="search-icon"
-                 src="https://cdn1.iconfinder.com/data/icons/hawcons/32/698956-icon-111-search-128.png" alt="">
-        </form>
-        <ul class="right-nav-list">
-            <li>
-                <a class="right-nav-link" type="submit">
-                    <img src="../assets/images/ic_filter.png" alt="">
-                </a>
-            </li>
-            <li>
-                <a [routerLink]="(routerLinkVariable ? listLink : mapLink)" class="right-nav-link" type="submit"
-                   (click)='toggleMap()'>
-                    <img [src]="(showMap ? listIcon : mapIcon )" alt="">
-                </a>
-            </li>
-            <li>
-                <a class="right-nav-link" type="submit">
-                    <img src="../assets/images/ic_settings.png" alt="">
-                </a>
-            </li>
-        </ul>
+            <!--main navigation buttons-->
+            <ul class="navbar-nav mr-auto main-nav-btns">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <img src="../assets/images/trending.png" alt="">
+                        Trending
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">
+                        <img src="../assets/images/ic_nearby.png" alt="">
+                        Nearby
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <img src="../assets/images/ic_my%20reviews.png" alt="">
+                        My Reviews
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <img src="../assets/images/ic_profile.png" alt="">
+                        Profile
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <img src="../assets/images/ic_followings.png" alt="">
+                        Followings
+                    </a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0 search-form">
+                <input class="form-control mr-sm-2 nav-search-bar" type="search" placeholder="Search for nearby places"
+                       aria-label="Search">
+                <img class="search-icon"
+                     src="https://cdn1.iconfinder.com/data/icons/hawcons/32/698956-icon-111-search-128.png" alt="">
+            </form>
+            <ul class="right-nav-list">
+                <li>
+                    <a class="right-nav-link" type="submit">
+                        <img src="../assets/images/ic_filter.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a [routerLink]="(routerLinkVariable ? listLink : mapLink)" class="right-nav-link" type="submit"
+                       (click)='toggleMap()'>
+                        <img [src]="(showMap ? listIcon : mapIcon )" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a class="right-nav-link" type="submit">
+                        <img src="../assets/images/ic_settings.png" alt="">
+                    </a>
+                </li>
+            </ul>
 
+        </div>
     </div>
 </nav>
 
 <!--Main content area-->
 
-<!--geolocation-->
-<!--{{errorMessage}}-->
-<!--{{lat}}-->
-<!--{{lon}}-->
-
-<!--{{token}}-->
-<!--{{data}}-->
-
-<!--{{img_url}}-->
-<div class="container-fluid">
+<div class="container main-content-area">
     <div class="row">
         <!--Left sidebar-->
-        <div class="col-12 col-md-3 pl-0 no-padding-s">
+        <div class="col-12 col-md-3 pl-0 padding-mob">
             <div class="row leftSidebar">
                 <!--login area-->
                 <div class="col-12 col-md-12 login-area">
@@ -99,7 +92,7 @@
                 <div class="col-12 col-md-12 category-area">
                     <a href="#">
                         <div class="row">
-                            <div class="col-3 col-md-3">
+                            <div class="col-3 col-md-3 category-img-container">
                                 <img class="category-image" src="../assets/images/AST food_and_drink.png" alt="">
                             </div>
                             <div class="col-9 col-md-9">
@@ -110,7 +103,7 @@
 
                     <a href="#">
                         <div class="row">
-                            <div class="col-3 col-md-3">
+                            <div class="col-3 col-md-3 category-img-container">
                                 <img class="category-image" src="../assets/images/fitness@2x.png" alt="">
                             </div>
                             <div class="col-9 col-md-9">
@@ -121,7 +114,7 @@
 
                     <a href="#">
                         <div class="row">
-                            <div class="col-3 col-md-3">
+                            <div class="col-3 col-md-3 category-img-container">
                                 <img class="category-image" src="../assets/images/beauty@2x.png" alt="">
 
                             </div>
@@ -134,7 +127,7 @@
 
                     <a href="#">
                         <div class="row">
-                            <div class="col-3 col-md-3">
+                            <div class="col-3 col-md-3 category-img-container">
                                 <img class="category-image" src="../assets/images/AST health_care@2x.png" alt="">
 
                             </div>
@@ -146,7 +139,7 @@
 
                     <a href="#">
                         <div class="row">
-                            <div class="col-3 col-md-3">
+                            <div class="col-3 col-md-3 category-img-container">
                                 <img class="category-image" src="../assets/images/ASTentertainment@2x.png" alt="">
 
                             </div>
@@ -158,30 +151,28 @@
 
                 </div>
 
-                <div class="col-12 col-md-12 boxes-container">
-                    <div class="box"></div>
-                    <div class="box"></div>
-                    <div class="box"></div>
-                    <div class="box"></div>
-                </div>
+                <!--<div class="col-12 col-md-12 boxes-container">-->
+                <!--<div class="box"></div>-->
+                <!--<div class="box"></div>-->
+                <!--<div class="box"></div>-->
+                <!--<div class="box"></div>-->
+                <!--</div>-->
             </div>
         </div>
 
         <!--main view area-->
-        <div class="col-12 col-md-6 no-padding-s">
+        <div class="col-12 col-md-6 pl-0 pr-0 ">
             <div class="row main-view-area">
-                <div class="container">
-                    <div class="col-12 col-md-12">
+                <div class="col-12 col-md-12">
                     <router-outlet></router-outlet>
-                    </div>
                 </div>
             </div>
         </div>
 
         <!--Right sidebar-->
-        <div class="col-12 col-md-3 pr-0 no-padding-s">
+        <div class="col-12 col-md-3 pr-0 padding-r-mob">
             <div class="row rightSidebar">
-                <div class="col-12 col-md-12">
+                <div class="col-12 col-md-12 rightSidebarContent">
                     right sidebar
                 </div>
             </div>
