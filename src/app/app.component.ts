@@ -1,8 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {TokenService} from './shared/token.service';
-import {PlacesService} from './shared/places.service';
 import {LocationService} from './shared/location.service';
-import {IPlace} from './shared/place';
 
 @Component({
     selector: 'app-root',

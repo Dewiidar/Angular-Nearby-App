@@ -17,7 +17,8 @@ export class PlacesService {
     // Retreiving token from local storage
     token = localStorage.getItem('token');
     // authentication key
-    authKey = `JWT ${this.token}`;
+    // authKey = `JWT ${this.token}`;
+    authKey = "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YWFkOWVkMzNmNGUyYTAwMGYzMjVlMDAiLCJyb2xlIjoiR1VFU1QiLCJpYXQiOjE1MzYzMzcyMzYsImV4cCI6MTU2Nzg5NDgzNn0.fKYGmqCsybAqqtO1QYPIupeHkDShzj7RjQmrj6GuTBc"
     // POST request header
     httpOptions = {
         headers: new HttpHeaders({

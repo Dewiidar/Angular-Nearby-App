@@ -1,8 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders, HttpErrorResponse} from '@angular/common/http';
-import {catchError, tap, map} from 'rxjs/operators';
+import {map} from 'rxjs/operators';
 import {Observable, throwError} from 'rxjs';
-import {s} from '@angular/core/src/render3';
 
 @Injectable({
     providedIn: 'root'
