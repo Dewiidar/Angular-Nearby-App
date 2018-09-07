@@ -10,6 +10,8 @@ import {PlacesService} from './shared/places.service';
 import {RouterModule} from '@angular/router';
 import {LocationService} from './shared/location.service';
 import { AgmCoreModule } from '@agm/core';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 
 @NgModule({
@@ -20,6 +22,8 @@ import { AgmCoreModule } from '@agm/core';
   ],
   imports: [
     BrowserModule,
+      BrowserAnimationsModule,
+      MatProgressSpinnerModule,
       HttpClientModule,
       RouterModule.forRoot([
           {path: '', component: ListViewComponent},

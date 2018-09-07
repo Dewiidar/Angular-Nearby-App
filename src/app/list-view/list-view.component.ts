@@ -13,6 +13,14 @@ export class ListViewComponent implements OnInit {
     // main data
     places: IPlace[] = [];
 
+    // loading spinner
+    color = 'red';
+    mode = 'indeterminate';
+    value = 50;
+    diameter = 50;
+    strokeWidth = 3;
+    isLoading = true;
+
     constructor(private placeService: PlacesService) {
     }
 
@@ -33,6 +41,9 @@ export class ListViewComponent implements OnInit {
             },
             err => {
                 console.log(err);
+            },
+            () => {
+                this.isLoading = !this.isLoading;
             }
         );
     }

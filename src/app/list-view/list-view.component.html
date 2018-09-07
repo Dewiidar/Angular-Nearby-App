@@ -1,4 +1,20 @@
 <!--title-->
+
+<div class="row no-margin-top" *ngIf="isLoading">
+    <div class="col-12 col-md-12 border-bottom-styles">
+        <div class="row">
+
+            <mat-progress-spinner
+                    class="spinner-style"
+                    [mode]="mode"
+                    [value]="value"
+                    [strokeWidth]="strokeWidth"
+                    [diameter]="diameter">
+            </mat-progress-spinner>
+
+        </div>
+    </div>
+</div>
 <div class="row no-margin-top" *ngFor="let place of places">
     <div class="col-12 col-md-12 border-bottom-styles">
         <div class="row">
@@ -31,7 +47,7 @@
         <!--description-->
         <div class="row">
             <div class="col-12 col-md-12">
-            {{place.shortDescription.en}}
+                {{place.shortDescription.en}}
             </div>
         </div>
 
@@ -39,11 +55,11 @@
         <div class="row">
             <div class="col-12 col-md-12">
 
-            <div class="keywords">
-                <a href="#{{place.hashtags[0].name}}">
-                    #{{place.hashtags[0].name}}
-                </a>
-            </div>
+                <div class="keywords">
+                    <a href="#{{place.hashtags[0].name}}">
+                        #{{place.hashtags[0].name}}
+                    </a>
+                </div>
 
             </div>
         </div>
@@ -52,33 +68,33 @@
         <div class="row">
             <div class="col-12 col-md-12">
 
-            <div class="metadata">
-                <div class="metadata-container">
-                    <div class="metadata-image">
-                        <img src="../../assets/images/ic_location@2x.png" alt="">
-                    </div>
-                    <div class="metadata-title">
-                        {{place.address.firstLine.en}}
+                <div class="metadata">
+                    <div class="metadata-container">
+                        <div class="metadata-image">
+                            <img src="../../assets/images/ic_location@2x.png" alt="">
+                        </div>
+                        <div class="metadata-title">
+                            {{place.address.firstLine.en}}
 
+                        </div>
+                    </div>
+                    <div class="metadata-container">
+                        <div class="metadata-image">
+                            <img src="../../assets/images/ic_walk@2x.png" alt="">
+                        </div>
+                        <div class="metadata-title">
+                            120 minutes walk
+                        </div>
+                    </div>
+                    <div class="metadata-container">
+                        <div class="metadata-image">
+                            <img class="img-md" src="../../assets/images/ic_followers@2x.png" alt="">
+                        </div>
+                        <div class="metadata-title">
+                            {{place.totalFollowersCount}} Followers
+                        </div>
                     </div>
                 </div>
-                <div class="metadata-container">
-                    <div class="metadata-image">
-                        <img src="../../assets/images/ic_walk@2x.png" alt="">
-                    </div>
-                    <div class="metadata-title">
-                        120 minutes walk
-                    </div>
-                </div>
-                <div class="metadata-container">
-                    <div class="metadata-image">
-                        <img class="img-md" src="../../assets/images/ic_followers@2x.png" alt="">
-                    </div>
-                    <div class="metadata-title">
-                        {{place.totalFollowersCount}} Followers
-                    </div>
-                </div>
-            </div>
 
             </div>
         </div>
